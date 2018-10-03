@@ -1,0 +1,225 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href='https://fonts.googleapis.com/css?family=Homemade Apple' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Give You Glory' rel='stylesheet'>
+        <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <style>
+            body, html {
+                height: 100%;
+                font-family: 'Give You Glory';
+                margin: 0;
+            }
+            
+            .parallax {
+                /* Full height */
+                height: 100%; 
+            
+                /* Create the parallax scrolling effect */
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative;
+                opacity: 0.65;
+            }
+
+            .caption {
+                position: absolute;
+                left: 0;
+                top: 50%;
+                width: 100%;
+                text-align: center;
+            }
+
+            .caption .text {
+                color: #fff;
+                background-color: #000;
+                padding: 18px;
+                font-size: 25px;
+                letter-spacing: 10px;
+            }
+
+            #image1 {
+                background-image: url('images/Chrysanthemum.jpg');
+            }
+            #image2 {
+                background-image: url('images/Desert.jpg');
+            }
+            #image3 {
+                background-image: url('images/Lighthouse.jpg');
+            }
+            .story {
+                padding:50px 80px;
+                background: linear-gradient(90deg, #ffc0cb, #FFFFFF, #FFFFFF, #FFFFFF, #FFFFFF, #89CFF0);
+            }
+            .story-content {
+                color: #222;
+                font-size: 20px;
+                text-align: justify;
+            }
+
+            /* snackbar - begin */
+            .snackbar {
+                visibility: hidden;
+                min-width: 250px;
+                margin-left: -125px;
+                background-color: #89CFF0;
+                color: #003366; 
+                text-align: center;
+                border-radius: 2px;
+                padding: 16px;
+                position: fixed;
+                z-index: 1;
+                left: 50%;
+                top: 30px;
+                font-size: 24px;
+            }
+
+            .snackbar.show {
+                visibility: visible;
+                -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+                animation: fadein 0.5s, fadeout 0.5s 2.5s;
+            }
+
+            /* Animations to fade the snackbar in and out */
+            @-webkit-keyframes fadein {
+                from {top: 0; opacity: 0;} 
+                to {top: 30px; opacity: 1;}
+            }
+
+            @keyframes fadein {
+                from {top: 0; opacity: 0;}
+                to {top: 30px; opacity: 1;}
+            }
+
+            @-webkit-keyframes fadeout {
+                from {top: 30px; opacity: 1;} 
+                to {top: 0; opacity: 0;}
+            }
+
+            @keyframes fadeout {
+                from {top: 30px; opacity: 1;}
+                to {top: 0; opacity: 0;}
+            }
+            /* snackbar - end */
+
+            /* overlay - BEGIN */
+            .overlay {
+                height: 0%;
+                width: 100%;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: rgba(137, 207, 240, 0.9);
+                overflow-y: hidden;
+                transition: 0.5s;
+            }
+
+            .overlay-content {
+                position: relative;
+                top: 25%;
+                width: 100%;
+                text-align: center;
+                margin-top: 30px;
+            }
+
+            .overlay a {
+                padding: 8px;
+                text-decoration: none;
+                font-size: 36px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+            }
+
+            .overlay a:hover, .overlay a:focus {
+                color: #f1f1f1;
+            }
+
+            .overlay .closebtn {
+                position: absolute;
+                top: 20px;
+                right: 45px;
+                font-size: 60px;
+            }
+
+            @media screen and (max-height: 450px) {
+                .overlay {overflow-y: auto;}
+                .overlay a {font-size: 20px}
+                .overlay .closebtn {
+                    font-size: 40px;
+                    top: 15px;
+                    right: 35px;
+                }
+            }
+            /* overlay - END */
+        </style>
+    </head>
+    <body>
+        <div id="name" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="overlay-content">
+                We're excited to see
+                <h2>Matteo Yuan</h2> <br>
+                <img style="width: auto; max-height: 200px;" src="images/Jellyfish.jpg">
+            </div>
+        </div>
+        <div id="gender" class="snackbar">It's a boy!</div>
+        <div class="parallax" id="image1">
+            <div class="caption">
+                <span class="text">
+                    GIRL OR BOY?
+                </span>
+            </div>
+        </div>
+        <div class="story">
+            <div class="story-content">
+                    Welcome to this page where you'll find out the <span id="reveal">gender</span> of our upcoming baby! But before that, we'll take you back to a journey of how our small family started.<br><br>
+                    Continue scrolling...
+
+            </div>
+        </div>
+        <div class="parallax" id="image2">
+            <div class="caption">
+                <span class="text">
+                    2006
+                </span>
+            </div>
+        </div>
+        <div class="story">
+            <div class="story-content">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce nunc ligula, sollicitudin id lectus id, vulputate vehicula magna. Nunc vel finibus nunc, sit amet hendrerit eros. Donec accumsan, orci vel sollicitudin cursus, nisi sapien varius nisi, nec pulvinar turpis nibh vel arcu. Pellentesque scelerisque nibh mi, et venenatis quam tempor vel. Sed volutpat sed nisl sed ornare. Aenean convallis nisi luctus felis mattis tincidunt sit amet vel enim. Duis vitae rutrum ante.
+            </div>
+        </div>
+        <div class="parallax" id="image3">
+            <div class="caption">
+                <span class="text">
+                    2018
+                </span>
+            </div>
+        </div>
+        <div class="story">
+            <div class="story-content">
+                    Missed the gender? <i class="em em-stuck_out_tongue_closed_eyes"></i> Scroll to the top and click the first "gender" you'll see. <i class="em em-baby"></i>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function() {
+
+                $("#reveal").click(function () {
+                    $("#gender").addClass('show');
+                    setTimeout(function () {
+                        $("#gender").removeClass('show');
+                        $("#name").css('height', '100%');
+                    }, 3000);
+                });
+            })
+            function closeNav() {
+                $("#name").css('height', '0%');
+            }
+        </script>
+    </body>
+</html>
