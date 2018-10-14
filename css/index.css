@@ -20,7 +20,7 @@ body, html {
     }
 }
 
-.hongkong-vid {
+/* .hongkong-vid {
     height: 100%;
     width: 100%;
     height: auto;
@@ -31,7 +31,7 @@ body, html {
     width: 100%; 
     height: auto;
     z-index: -1;
-}
+} */
 .caption {
     position: absolute;
     left: 0;
@@ -47,6 +47,9 @@ body, html {
     font-size: 40px;
     letter-spacing: 5px;
     border-radius: 15px;
+}
+#hidden-img {
+    display: none;
 }
 
 #image1 {
@@ -66,8 +69,29 @@ body, html {
 }
 #caleb-award {
     background-image: url('../images/caleb-award.jpg');
-    background-size: contain;
-    background-color: #89CFF0;
+    /* background-size: contain;
+    background-color: #89CFF0; */
+}
+#batangas {
+    background-image: url('../images/batangas.jpg');
+}
+#hongkong {
+    background-image: url('../images/hongkong.jpg');
+}
+#singapore {
+    background-image: url('../images/singapore.jpg');
+}
+#black-bg {
+    background: #000;
+}
+#pregnancy-test {
+    background-image: url('../images/pregnancy-test.jpg');
+}
+#cathei-preggy {
+    background-image: url('../images/cathei-preggy.jpg');
+}
+#utz-4d {
+    background-image: url('../images/utz.jpg');
 }
 .story-pink {
     background: #ffc0cb;
@@ -199,7 +223,7 @@ body, html {
 }
 .overlay-content img{
     width: auto;
-    max-height: 200px;
+    max-height: 300px;
 }
 
 @media screen and (max-width: 425px) {
