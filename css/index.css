@@ -48,12 +48,24 @@ body, html {
     letter-spacing: 5px;
     border-radius: 15px;
 }
+
+.caption .positive {
+    color: #fff;
+    background-color: #990000;
+    font-size: 40px;
+    border-radius: 50%;
+    height: 85px;
+    width: 85px;
+    font-family: 'Robotto';
+    padding: 8px 20px;
+}
 #hidden-img {
     display: none;
 }
 
 #image1 {
-    background-image: url('https://media.istockphoto.com/vectors/cute-vector-character-illustration-teddy-bear-holding-blue-and-pink-vector-id923289656?k=6&m=923289656&s=612x612&w=0&h=-HNzBLkhIf_NrczbMB8peJ16EERET_JCIkZq1Gp6kZk=');
+    background-image: url('../images/he-or-she.jpg');
+    opacity: 1;
 }
 #image2 {
     background-image: url('../images/2006.jpg');
@@ -66,6 +78,9 @@ body, html {
 }
 #caleb {
     background-image: url('../images/caleb.jpg');
+}
+#caleb-bday {
+    background-image: url('../images/caleb-bday.jpg');
 }
 #caleb-award {
     background-image: url('../images/caleb-award.jpg');
@@ -83,6 +98,28 @@ body, html {
 }
 #black-bg {
     background: #000;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    position: relative;
+}
+#blank-space {
+    height: 70%; 
+    display: table;
+    margin: auto;
+}
+
+#blank-space span {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 40px;
+}
+
+.loader {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
 }
 #pregnancy-test {
     background-image: url('../images/pregnancy-test.jpg');
@@ -105,6 +142,15 @@ body, html {
 .story {
     padding: 50px 80px;
     min-width: 50%;
+}
+.story-fullscreen {
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 80px;
+    padding-right: 80px;
 }
 .story-content {
     color: #222;
