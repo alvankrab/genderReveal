@@ -69,6 +69,10 @@ body, html {
 }
 #image2 {
     background-image: url('../images/2006.jpg');
+    opacity: 1;
+}
+#birthday-23 {
+    background-image: url('../images/23rd-bday.jpg');
 }
 #image3 {
     background-image: url('../images/date.jpg');
@@ -116,6 +120,8 @@ body, html {
 }
 
 .loader {
+    color: #fff;
+    font-size: 30px;
     position: absolute;
     left: 0;
     width: 100%;
@@ -123,12 +129,14 @@ body, html {
 }
 #pregnancy-test {
     background-image: url('../images/pregnancy-test.jpg');
+    opacity: 1;
 }
 #cathei-preggy {
     background-image: url('../images/cathei-preggy.jpg');
 }
 #utz-4d {
     background-image: url('../images/utz.jpg');
+    opacity: 1;
 }
 .story-pink {
     background: #ffc0cb;
